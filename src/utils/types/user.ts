@@ -1,6 +1,10 @@
 export interface UserType {
-  id: number;
-  first_name: string;
-  last_name: string;
-  username: string;
+  content: string;
+  description: string;
+  priority: number;
+  id: string;
+}
+
+export interface completedType {
+  isCompleted: boolean;
 }
