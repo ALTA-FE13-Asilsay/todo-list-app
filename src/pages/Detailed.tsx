@@ -78,7 +78,6 @@ const Detailed: FC = () => {
     for (key in objSubmit) {
       formData.append(key, objSubmit[key]);
     }
-    console.log(formData);
     axios
       .post(`tasks/${id}`, formData, {
         headers: {
