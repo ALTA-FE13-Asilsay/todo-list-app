@@ -65,7 +65,7 @@ const Detailed: FC = () => {
   }
 
   function handleChange(value: string | File, key: keyof typeof objSubmit) {
-    let temp = { ...objSubmit };
+    let temp: any = { ...objSubmit };
     temp[key] = value;
     setObjSubmit(temp);
   }
@@ -73,7 +73,7 @@ const Detailed: FC = () => {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const { detail: id } = params;
-    const formData = new FormData();
+    const formData: any = new FormData();
     let key: keyof typeof objSubmit;
     for (key in objSubmit) {
       formData.append(key, objSubmit[key]);
